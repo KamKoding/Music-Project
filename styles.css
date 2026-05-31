@@ -17,13 +17,10 @@ li {
 
 /* HEADER STYLING */
 
-.logo {
-    width: 80px;
-    height: 80px;
-}
 
 nav {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     height: 100px;
@@ -31,7 +28,35 @@ nav {
     /* max-width: 1200px; */
     margin: 0 auto;
     background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-bottom: 3px solid #242424;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.1);
 }
+
+.logo__container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+/* 
+#logo-draggable {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    user-select: none;
+    transform: rotate(0deg);
+    transition: transform 0.1s ease-out;
+} */
+
+
 
 .nav__link--list {
     display: flex;
@@ -48,4 +73,54 @@ nav {
 
 .nav__link {
     margin: 0 12px;
+}
+
+/* MAIN PAGE STYLING */
+
+/* mixedbackground testing v */
+
+body {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* background-image: url('https://i.pinimg.com/1200x/67/1a/14/671a1415b89a7e7d8534d79ff517121f.jpg'), url('https://i.pinimg.com/736x/06/08/3a/06083afb30f93cc47f729d11b09fe3a0.jpg'), url('https://i.pinimg.com/736x/e0/98/2b/e0982b1ae2211b69afd2c2307df43e2e.jpg'); */
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 500px;
+}
+
+/* SEARCH RESULTS */
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    margin: 0 0 0 auto;
+    right: 80px;
+}
+
+#search__results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+#search__results--item {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px;
+}
+
+.search__results--artwork {
+    min-width: 250px;
+    border-radius: 8px;
+}
+
+.search__results--info {
+    font-size: 14px;
+    max-width: 100px;
+}
+
+.search__results--title {
+    line-height: 1.5;
+    min-width: 250px;
 }

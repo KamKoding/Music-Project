@@ -1,27 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="./iTunes.js"></script>
     <title>Music App</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="landing-page">
-        
-    <nav>
-        <figure>
-            <img class="logo" src="./assets/vinyl-record.svg" alt="Vinyl Record">
+      <nav>
+        <figure class="logo__container">
+          <img
+            class="logo"
+            id="logo-draggable"
+            src="./assets/vinyl-record.svg"
+            alt="Vinyl Record"
+          />
         </figure>
         <ul class="nav__link--list">
-            <li class="nav__link"><a class="nav__link--anchor" href="#">Home</a></li>
-            <li class="nav__link"><a class="nav__link--anchor" href="#">Library</a></li>
-            <li class="nav__link"><a class="nav__link--anchor" href="#">About</a></li>
+          <li class="nav__link">
+            <a class="nav__link--anchor" href="#">Home</a>
+          </li>
+          <li class="nav__link">
+            <a class="nav__link--anchor" href="#">Library</a>
+          </li>
+          <li class="nav__link">
+            <a class="nav__link--anchor" href="#">About</a>
+          </li>
         </ul>
-    </nav>
-    <input id="search" placeholder="Search for music..." />
-    <button id="searchBtn">Search</button>
+      </nav>
+      <div class="search__container">
+        <select id="filter" onchange="filterResults()">
+          <option value="" disabled selected>Filter By</option>
+          <option value="">Alphabetical A-Z</option>
+          <option value="">Newest to Oldest</option>
+          <option value="">Oldest to Newest</option>
+        </select>
+        <input id="search" placeholder="Search for music..." />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <!-- PLACEHOLDERS -->
+
+      <div id="search__results">
+        
+      </div>
     </section>
-</body>
+  </body>
 </html>
